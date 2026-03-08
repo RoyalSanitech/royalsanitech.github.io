@@ -19,41 +19,51 @@ body{
 line-height:1.6;
 }
 
+/* HEADER */
+
 header{
 background:#0a2a66;
 color:white;
-padding:20px 50px;
+padding:15px 40px;
 display:flex;
+flex-wrap:wrap;
 justify-content:space-between;
 align-items:center;
 }
 
 header h1{
-font-size:24px;
+font-size:22px;
 }
 
 nav a{
 color:white;
-margin-left:20px;
+margin-left:15px;
 text-decoration:none;
 font-weight:bold;
+font-size:14px;
 }
 
+/* HERO */
+
 .hero{
-background:url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover;
-height:80vh;
+background:url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
+height:75vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:20px;
 color:white;
 }
 
 .hero h2{
-font-size:45px;
+font-size:40px;
 background:rgba(0,0,0,0.6);
 padding:20px;
+border-radius:6px;
 }
+
+/* SECTIONS */
 
 .section{
 padding:60px 80px;
@@ -65,30 +75,49 @@ margin-bottom:30px;
 color:#0a2a66;
 }
 
+/* SERVICES */
+
 .services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+transition:all 0.3s ease;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 25px rgba(0,0,0,0.2);
+}
+
+.service-card h3{
+margin-bottom:10px;
+color:#0a2a66;
+}
+
+/* PROJECTS */
+
+.projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.card{
+.project{
 background:#f4f4f4;
-padding:25px;
+padding:20px;
 border-radius:8px;
 text-align:center;
 }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-
-.project{
-background:#eee;
-padding:20px;
-border-radius:6px;
-}
+/* CONTACT */
 
 .contact{
 background:#0a2a66;
@@ -97,6 +126,23 @@ text-align:center;
 padding:40px;
 }
 
+button{
+background:white;
+color:#0a2a66;
+border:none;
+padding:12px 20px;
+margin-top:10px;
+cursor:pointer;
+border-radius:4px;
+font-weight:bold;
+}
+
+button:hover{
+background:#e6e6e6;
+}
+
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:15px;
@@ -104,18 +150,59 @@ background:#111;
 color:white;
 }
 
-button{
-background:#0a2a66;
-color:white;
-border:none;
-padding:12px 20px;
-margin-top:10px;
-cursor:pointer;
-border-radius:4px;
+/* WHATSAPP BUTTON */
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+z-index:1000;
 }
 
-button:hover{
-background:#153d8a;
+.whatsapp-float:hover{
+transform:scale(1.1);
+transition:0.2s;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+.section{
+padding:40px 20px;
+}
+
+.hero{
+height:60vh;
+}
+
+.hero h2{
+font-size:24px;
+padding:15px;
+}
+
 }
 
 </style>
@@ -138,21 +225,17 @@ background:#153d8a;
 </header>
 
 <section class="hero">
-
-<h2>
-Professional Plumbing & Sanitary Solutions Since 1997
-</h2>
-
+<h2>Professional Plumbing & Sanitary Solutions Since 1997</h2>
 </section>
 
 <section class="section" id="about">
 
 <h2>About Us</h2>
 
-<p style="text-align:center; max-width:900px; margin:auto;">
+<p style="text-align:center;max-width:900px;margin:auto;">
 
-Royal Sani-Tech Engineers & Contractors is a professional plumbing and sanitary contracting company established in 1997.  
-We specialize in plumbing works, sanitary insulation, and core cutting services for residential, commercial, and institutional projects.  
+Royal Sani-Tech Engineers & Contractors is a professional plumbing and sanitary contracting company established in 1997.
+We specialize in plumbing works, sanitary insulation, and core cutting services for residential, commercial, and institutional projects.
 
 With experienced supervisors and skilled workforce, we deliver reliable and high-quality plumbing solutions for major builders and institutions.
 
@@ -190,81 +273,29 @@ With experienced supervisors and skilled workforce, we deliver reliable and high
 
 </section>
 
-
 <section class="section" id="projects">
 
 <h2>Major Projects</h2>
 
 <div class="projects">
 
-<div class="project">
-Apollo Hospital
-</div>
-
-<div class="project">
-Hotel Muthoot Plaza – Trivandrum
-</div>
-
-<div class="project">
-Laguna Resort – Kumarakom
-</div>
-
-<div class="project">
-Noel Greennature Apartments – Kakkanad
-</div>
-
-<div class="project">
-Desai Homes Projects – Multiple Locations
-</div>
-
-<div class="project">
-Veterinary Medical College – Mannuthy
-</div>
-
-<div class="project">
-VSSC Project – Kazhakkoottam
-</div>
-
-<div class="project">
-Krayons Tower – Kakkanad
-</div>
-  
-<div class="project">
-QSAT Engineering College
-</div>
-  
-<div class="project">
-Cool Homes
-</div>
-  
-<div class="project">
-Maria Hospital
-</div>
-
-<div class="project">
-Hotel TAJ -Kovalam
-</div>
-  
-<div class="project">
-Noel Construction
-</div>
-  
-<div class="project">
-Malabar Gold and Diamonds
-</div>
-  
-<div class="project">
-Cheriyan Varkey Constructions
-</div>
+<div class="project">Apollo Hospital</div>
+<div class="project">Hotel Muthoot Plaza – Trivandrum</div>
+<div class="project">Laguna Resort – Kumarakom</div>
+<div class="project">Noel Greennature Apartments – Kakkanad</div>
+<div class="project">Desai Homes Projects</div>
+<div class="project">Veterinary Medical College – Mannuthy</div>
+<div class="project">VSSC Project – Kazhakkoottam</div>
+<div class="project">Krayons Tower – Kakkanad</div>
+<div class="project">QSAT Engineering College</div>
+<div class="project">Cool Homes</div>
+<div class="project">Maria Hospital</div>
+<div class="project">Hotel Taj – Kovalam</div>
 
 </div>
 
 </section>
 
-<section class="contact" id="contact">
-<section class="section" id="profile">
-
-<h2>Company Profile</h2>
 <section class="section" id="profile">
 
 <h2>Royal Sani-Tech Company Profile</h2>
@@ -289,55 +320,28 @@ Click the button below to view our company brochure.
 
 </section>
 
-</section>
+<section class="contact" id="contact">
+
 <h2>Contact Us</h2>
 
 <p>ROYAL SANI-TECH Engineers & Contractors</p>
-
 <p>Royal Plaza Building, Aluva, Kerala</p>
-
 <p>Mobile: +91 9847157539</p>
-
 <p>Email: royalsanitech@gmail.com</p>
-
-<button>Request a Quote</button>
 
 </section>
 
 <footer>
-
 © 2026 Royal Sani-Tech Engineers & Contractors
-
 </footer>
-<a href="https://api.whatsapp.com/send?phone=919847157539" 
-   class="whatsapp-float" 
-   target="_blank">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-     alt="WhatsApp" width="35">
+<a href="https://api.whatsapp.com/send?phone=919847157539" 
+class="whatsapp-float" 
+target="_blank">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35">
 
 </a>
 
-<style>
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-width:65px;
-height:65px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
-z-index:1000;
-}
-
-.whatsapp-float:hover{
-transform:scale(1.1);
-transition:0.2s;
-}
-</style>
 </body>
 </html>
