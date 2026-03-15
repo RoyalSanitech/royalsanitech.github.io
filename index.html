@@ -65,23 +65,34 @@ font-size:14px;
 background:url("images/plumbing.jpg") center/cover no-repeat;
 height:80vh;
 display:flex;
-align-items:flex-start;   /* move text higher */
+align-items:flex-start;
 justify-content:center;
 text-align:center;
 color:white;
-padding-top:160px;        /* adjust vertical position */
+padding-top:160px;
 padding-left:20px;
 padding-right:20px;
 }
 
 .hero h2{
-font-size:42px;
-background:rgba(0,0,0,0.55);
-padding:20px 40px;
-border-radius:6px;
+font-size:40px;
+background:rgba(0,0,0,0.6);
+padding:25px 50px;
+border-radius:8px;
 max-width:900px;
-line-height:1.3;
+line-height:1.4;
 }
+
+/* highlight since year */
+
+.hero h2 span{
+color:#ffd400;
+font-size:28px;
+display:block;
+margin-top:8px;
+font-weight:bold;
+}
+
 /* SECTIONS */
 
 .section{
@@ -250,10 +261,16 @@ margin:8px;
 
 .hero{
 height:60vh;
+padding-top:120px;
 }
 
 .hero h2{
 font-size:24px;
+padding:15px 20px;
+}
+
+.hero h2 span{
+font-size:18px;
 }
 
 .section{
@@ -285,7 +302,8 @@ padding:40px 20px;
 <section class="hero">
 
 <h2 data-aos="zoom-in">
-Professional Plumbing & Sanitary Solutions Since 1997
+Professional Plumbing & Sanitary Solutions<br>
+<span>Since 1997</span>
 </h2>
 
 </section>
@@ -400,9 +418,7 @@ Since 1997 we have been providing professional plumbing installation, sanitary s
 <form action="https://formsubmit.co/royalsanitech@gmail.com" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
-
 <input type="email" name="email" placeholder="Your Email" required>
-
 <input type="text" name="phone" placeholder="Phone Number">
 
 <textarea name="message" placeholder="Your Message" rows="5"></textarea>
@@ -418,9 +434,7 @@ Since 1997 we have been providing professional plumbing installation, sanitary s
 </section>
 
 <footer>
-
 © 2026 Royal Sani-Tech Engineers & Contractors
-
 </footer>
 
 <a href="https://api.whatsapp.com/send?phone=919847157539"
